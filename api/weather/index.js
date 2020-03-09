@@ -2,13 +2,12 @@ const express = require("express");
 const router = express.Router();
 const request = require("request");
 
-router.get("/test", function(req, res){
-  res.send("it's alive!");
-})
-
 router.get("/current", (req, res)=>{
   //api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
-  request(`https://api.openweathermap.org/data/2.5/weather?q=Duga%20Resa&appid=${process.env.API_KEY_WEATHER}`, function(err, resp, body){
+  request({
+    url: `https://api.openweathermap.org/data/2.5/weather?q=Duga%20Resa&units=metric&appid=${process.env.API_KEY_WEATHER}`,
+    json: true
+  }, function(err, resp, body){
     if(err){
       console.error(err);
       res.json({
@@ -16,7 +15,10 @@ router.get("/current", (req, res)=>{
         error: err
       });
     } else {
-      res.send(body);
+      console.log(body);
+      res.json({
+        temperature: Math.round(body.main.temp) 
+      });
     }
   })
 })
