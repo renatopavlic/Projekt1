@@ -8,7 +8,7 @@ router.get("/test", function(req, res){
 
 router.get("/current", (req, res)=>{
   //api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
-  request("https://api.openweathermap.org/data/2.5/weather?q=Duga%20Resa&appid=nemam", function(err, resp, body){
+  request(`https://api.openweathermap.org/data/2.5/weather?q=Duga%20Resa&appid=${process.env.API_KEY_WEATHER}`, function(err, resp, body){
     if(err){
       console.error(err);
       res.json({
