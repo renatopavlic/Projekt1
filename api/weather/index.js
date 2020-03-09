@@ -17,14 +17,19 @@ router.get("/current", (req, res)=>{
     } else {
       console.log(body);
       res.json({
-        temperature: Math.round(body.main.temp) 
+        temperature: Math.round(body.main.temp)
       });
     }
   })
 })
-
+/*
+  curl -H "Content-Type: application/json" -d "{\"a\}" localhost:3003/api/weather/add
+*/
 router.post("/add", function(req, res){
-
+  console.log(req.body);
+  res.json({
+    msg: req.body.a+req.body.b
+  })
 })
 //For creating new accounts, user inputs basic information in order to register
 module.exports = router;
