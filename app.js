@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const api = require('./api');
 
 
-//app.use(express.static(__dirname + "/frontend/build"));
+app.use(express.static(__dirname + "/frontend/build"));  
 app.use(bodyParser.json());
 app.use("/api", api);
 
