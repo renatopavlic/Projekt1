@@ -23,7 +23,7 @@ router.get("/current", (req, res)=>{
   })
 })
 /*
-  curl -H "Content-Type: application/json" -d "{\"a\}" localhost:3003/api/weather/add
+  curl -H "Content-Type: application/json" -d "{\"a\":1, \"b\":2}" localhost:3003/api/weather/add
 */
 router.post("/add", function(req, res){
   console.log(req.body);
