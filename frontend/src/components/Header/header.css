@@ -1,0 +1,21 @@
+.mynav {
+    background-color: #223343;
+    text-align: center;
+    padding: 10px;
+}
+
+.myli {
+    display: inline-block;
+}
+
+.mylink {
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+    font-size: larger;
+}
+
+.mylink:hover {
+    background-color: #334454;
+}
+

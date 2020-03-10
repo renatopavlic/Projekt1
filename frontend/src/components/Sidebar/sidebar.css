@@ -1,0 +1,6 @@
+.mysidebar {
+    height: 90vh;
+    background-color: tomato;
+    width: 30%;
+    display: inline-block;
+}
