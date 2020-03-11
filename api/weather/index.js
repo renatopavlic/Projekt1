@@ -17,7 +17,8 @@ router.get("/current", (req, res)=>{
     } else {
       console.log(body);
       res.json({
-        temperature: Math.round(body.main.temp)
+        temperature: Math.round(body.main.temp),
+        location: "Duga Resa"
       });
     }
   })
