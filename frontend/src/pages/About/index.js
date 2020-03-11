@@ -1,13 +1,14 @@
 import React from 'react';
 
+import style from "./index.module.css"
+
 import Main from "../../components/Main"
 import Sidebar from "../../components/Sidebar"
 
 function About() {
   return (
     <div>
-      <Main></Main>
-      <Sidebar></Sidebar>
+        <p className={style.iggy}>slkčdjsaldfkjalskdfkjaslčdfj</p>   
     </div>
   );
 }
