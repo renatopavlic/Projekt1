@@ -1,2 +1,2 @@
 # Projekt1
-Testing project1
+Working in React with REST API and MongoDB.
